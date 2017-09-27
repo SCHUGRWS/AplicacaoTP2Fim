@@ -190,20 +190,47 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AssociationTypeController.cs" />
+    <Compile Include="Controllers\BandController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709262311107_PrimeiroTeste.cs" />
+    <Compile Include="Migrations\201709262311107_PrimeiroTeste.Designer.cs">
+      <DependentUpon>201709262311107_PrimeiroTeste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709262331234_InserirBand.cs" />
+    <Compile Include="Migrations\201709262331234_InserirBand.Designer.cs">
+      <DependentUpon>201709262331234_InserirBand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709262332368_InserirAssoc.cs" />
+    <Compile Include="Migrations\201709262332368_InserirAssoc.Designer.cs">
+      <DependentUpon>201709262332368_InserirAssoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709262333397_InserirStudent.cs" />
+    <Compile Include="Migrations\201709262333397_InserirStudent.Designer.cs">
+      <DependentUpon>201709262333397_InserirStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AssociationType.cs" />
+    <Compile Include="Models\Band.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AssociationTypeIndexView.cs" />
+    <Compile Include="ViewModels\BandIndexView.cs" />
+    <Compile Include="ViewModels\StudentIndexView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\estilo.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -258,6 +285,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\AssociationType\DetalharTipoAssociacao.cshtml" />
+    <Content Include="Views\AssociationType\Index.cshtml" />
+    <Content Include="Views\Band\DetalharFaixa.cshtml" />
+    <Content Include="Views\Band\Index.cshtml" />
+    <Content Include="Views\Student\DetalharAluno.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +307,20 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709262311107_PrimeiroTeste.resx">
+      <DependentUpon>201709262311107_PrimeiroTeste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709262331234_InserirBand.resx">
+      <DependentUpon>201709262331234_InserirBand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709262332368_InserirAssoc.resx">
+      <DependentUpon>201709262332368_InserirAssoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709262333397_InserirStudent.resx">
+      <DependentUpon>201709262333397_InserirStudent.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

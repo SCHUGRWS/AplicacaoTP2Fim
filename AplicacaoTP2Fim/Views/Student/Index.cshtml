@@ -1,0 +1,39 @@
+﻿@*/Richard Wilhian Schug
+    richard.schug@catolicasc.org.br*@
+
+@model AvaliacaoTP2.ViewModels.StudentIndexView
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Alunos</h3>
+
+@if (@Model.Alunos.Count> 0)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr><th>Nome</th><th>CPF</th><th>Faixa</th><th>TipoDeAssociação</th></tr>
+        </thead>
+        <tbody>
+
+            @foreach (var aluno in Model.Alunos)
+            {
+                <tr>
+                    <td>@Html.ActionLink(aluno.Nome, "DetalharAluno", new { aluno.Id })</td>
+                    <td>@aluno.Cpf</td>
+                    <td>@aluno.Faixa.Nome</td>
+                    <td>@aluno.TipoAssociacao.Nome</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não existe nenhum aluno ainda.</p>
+}
+
+
+

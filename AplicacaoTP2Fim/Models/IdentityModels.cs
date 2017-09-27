@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using AvaliacaoTP2.Models;
 
 namespace AplicacaoTP2Fim.Models
 {
@@ -20,6 +21,10 @@ namespace AplicacaoTP2Fim.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Band> Band { get; set; }
+        public DbSet<Student> Student { get; set; }
+        public DbSet<AssociationType> AssociantionType { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

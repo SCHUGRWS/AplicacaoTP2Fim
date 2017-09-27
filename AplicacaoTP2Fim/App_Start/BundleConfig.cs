@@ -24,7 +24,7 @@ namespace AplicacaoTP2Fim
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/estilo.css",
                       "~/Content/site.css"));
         }
     }

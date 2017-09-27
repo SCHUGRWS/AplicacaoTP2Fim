@@ -1,0 +1,37 @@
+﻿@*/Richard Wilhian Schug
+    richard.schug@catolicasc.org.br*@
+
+@model AvaliacaoTP2.ViewModels.AssociationTypeIndexView
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Tipos de Associação</h3>
+
+@if (@Model.TiposAssociacoes.Count> 0)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr><th>Nome</th><th>Periodo</th><th>Mensalidade</th></tr>
+        </thead>
+        <tbody>
+
+            @foreach (var tpAssociacao in Model.TiposAssociacoes)
+            {
+                <tr><td>@Html.ActionLink(tpAssociacao.Nome, "DetalharTipoAssociacao", new { tpAssociacao.Id })</td>
+                    <td>@tpAssociacao.Periodo</td>
+                    <td>@tpAssociacao.Mensalidade</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não existe nenhum aluno ainda.</p>
+}
+
+
+
